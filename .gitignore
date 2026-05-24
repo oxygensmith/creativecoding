@@ -1,0 +1,25 @@
+# Hugo output
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Node
+node_modules/
+.npm
+*.log
+
+# Env
+.env
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+.claude/*
+claude.md

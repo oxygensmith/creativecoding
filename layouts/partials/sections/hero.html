@@ -1,0 +1,9 @@
+<section class="hero-section">
+  <div class="container">
+    {{ with .heading }}<h1>{{ . }}</h1>{{ end }}
+    {{ with .body }}<p>{{ . | markdownify }}</p>{{ end }}
+    {{ with .cta }}
+    <a class="btn" href="{{ .url }}">{{ .label }}</a>
+    {{ end }}
+  </div>
+</section>

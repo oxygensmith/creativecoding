@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ $layout := .Params.cardLayout | default "grid" }}
+<section class="page-section">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    <div class="sketch-card-grid sketch-card-grid--{{ $layout }}">
+      {{ range .Pages }}
+      <a class="sketch-card sketch-card--{{ $layout }}{{ if not .Params.screenshot }} sketch-card--no-image{{ end }}" href="{{ .RelPermalink }}">
+        {{ if .Params.screenshot }}
+        <div class="sketch-card__image">
+          <img src="/screenshots/{{ .Params.screenshot }}" alt="{{ .Title }}">
+        </div>
+        {{ end }}
+        <div class="sketch-card__meta">
+          <span class="sketch-card__title">{{ .Title }}</span>
+          {{ with .Description }}<span class="sketch-card__desc">{{ . }}</span>{{ end }}
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

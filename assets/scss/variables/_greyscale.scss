@@ -1,0 +1,30 @@
+// Define the greyscale colors as CSS custom properties (variables)
+:root {
+  // greyscale palette
+  --grey-100: #f8f9fa;
+  --grey-200: #e9ecef;
+  --grey-300: #dee2e6;
+  --grey-400: #ced4da;
+  --grey-500: #adb5bd;
+  --grey-600: #6c757d;
+  --grey-700: #495057;
+  --grey-800: #343a40;
+  --grey-900: #212529;
+
+  // Simplified black and white
+  --white: #fff;
+  --black: #000;
+}
+
+// Create a map for utility class generation
+$greys: (
+  "100": var(--grey-100),
+  "200": var(--grey-200),
+  "300": var(--grey-300),
+  "400": var(--grey-400),
+  "500": var(--grey-500),
+  "600": var(--grey-600),
+  "700": var(--grey-700),
+  "800": var(--grey-800),
+  "900": var(--grey-900),
+);

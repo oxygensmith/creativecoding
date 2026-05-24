@@ -1,0 +1,4 @@
+<canvas id="sketch-{{ .Get 0 }}" class="sketch-canvas" width="{{ .Get 1 | default 600 }}" height="{{ .Get 2 | default 600 }}"></canvas>
+<script src="/js/canvas-sketch.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/sketches/{{ .Get 0 }}.js"></script>

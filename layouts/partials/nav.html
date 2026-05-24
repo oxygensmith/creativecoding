@@ -1,0 +1,29 @@
+<a class="skip-nav" href="#content">Skip to main content</a>
+<header class="nav-header">
+  <nav class="navbar" id="mainNav">
+    <div class="container nav-container">
+      <a class="navbar-brand" href="/">
+        <span class="name{{ if .IsHome }} name--home-anim{{ end }}">{{ .Site.Title }}</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        Menu
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/posts/">Examples</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

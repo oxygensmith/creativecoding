@@ -1,0 +1,14 @@
+baseURL = "https://creativecoding.robbutz.com/"
+languageCode = "en-us"
+title = "CreativeCoding"
+
+[params]
+  description = "A collection of creative coding experiments by Rob Butz."
+  author = "Rob Butz"
+  gaID = ""
+  ogImage = "https://creativecoding.robbutz.com/img/social/og-image.png"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

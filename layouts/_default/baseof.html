@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body{{ with .Params.bodyClass }} class="{{ . }}"{{ end }}>
+    <div id="page-wrapper" class="bg-dark">
+    {{ partial "nav.html" . }}
+
+    <main id="content" tabindex="0">
+
+        {{ block "main" . }}{{ end }}
+
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    {{ block "modal" . }}{{ end }}
+
+    {{ block "scripts" . }}
+    {{ $scripts := resources.Get "js/scripts.js" | js.Build (dict "target" "es2020") }}
+    <script type="module" src="{{ $scripts.RelPermalink }}"></script>
+    {{ end }}
+    </div>
+</body>
+
+</html>

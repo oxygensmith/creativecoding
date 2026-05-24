@@ -1,0 +1,14 @@
+// variables/index manifest
+
+@import "breakpoints"; // Breakpoint definitions come first
+@import "../mixins/breakpoint-mixins"; // Mixin needed by typography responsive blocks
+@import "spacing"; // Spacing scale
+@import "containers"; // Container sizes
+@import "greyscale"; // Basic grey shades
+@import "colors"; // Main color definitions
+@import "tints"; // Color tints/shades
+@import "typography"; // Typography variables
+@import "borders"; // Border styles and radiuses
+@import "shadows"; // Shadow definitions
+@import "forms"; // Form-specific variables
+@import "transitions"; // Transition speed tokens

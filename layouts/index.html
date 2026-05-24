@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+{{ range .Params.sections }}
+  {{ if eq .type "hero" }}
+    {{ partial "sections/hero.html" . }}
+  {{ else if eq .type "text" }}
+    {{ partial "sections/text.html" . }}
+  {{ end }}
+{{ end }}
+
+{{ $layout := .Params.cardLayout | default "grid" }}
+
+{{ $featured := slice }}
+{{ range site.RegularPages }}
+  {{ if and .Params.screenshot (in (.Params.tags | default slice) "featured") }}
+    {{ $featured = $featured | append . }}
+  {{ end }}
+{{ end }}
+
+{{ if $featured }}
+<section class="page-section">
+  <div class="container">
+    <div class="sketch-card-grid sketch-card-grid--{{ $layout }}">
+      {{ range $featured }}
+      <a class="sketch-card sketch-card--{{ $layout }}" href="{{ .RelPermalink }}">
+        <div class="sketch-card__image">
+          <img src="/screenshots/{{ .Params.screenshot }}" alt="{{ .Title }}">
+        </div>
+        <div class="sketch-card__meta">
+          <span class="sketch-card__title">{{ .Title }}</span>
+          {{ with .Description }}<span class="sketch-card__desc">{{ . }}</span>{{ end }}
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ end }}

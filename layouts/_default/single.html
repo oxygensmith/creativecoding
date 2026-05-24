@@ -1,0 +1,109 @@
+{{ define "main" }}
+<article class="page-section">
+  <div class="container">
+    {{ range .Params.sketches }}
+    <div class="post-two-column">
+      <div class="art">
+        <canvas
+          id="sketch-{{ . }}"
+          class="sketch-canvas{{ if $.Page.Params.bordered }} sketch-canvas--bordered{{ end }}"
+          width="600"
+          height="600"
+        ></canvas>
+        <script src="/js/canvas-sketch.js"></script>
+        <script src="/js/utils.js"></script>
+        {{ if $.Page.Params.tweakpane }}
+        <script src="https://cdn.jsdelivr.net/npm/tweakpane@3/dist/tweakpane.min.js"></script>
+        {{ end }}
+        <script src="/js/sketches/{{ . }}.js"></script>
+        <script src="/js/keyboard-nav.js"></script>
+        {{ end }}
+      </div>
+      <div class="description">
+        <div class="description-content">
+          <h3>{{ .Title }}</h3>
+          <div class="description-text">{{ .Content }}</div>
+          <nav class="post-nav">
+            {{ if .PrevInSection }}
+            <a
+              class="post-nav__item"
+              data-nav="prev"
+              href="{{ .PrevInSection.Permalink }}"
+            >
+              {{ readFile "static/icons/arrow-left.svg" | safeHTML }}
+              <span class="post-nav__label">prev</span>
+            </a>
+            {{ else }}
+            <span
+              class="post-nav__item post-nav__item--disabled"
+              data-nav="prev"
+            >
+              {{ readFile "static/icons/arrow-left.svg" | safeHTML }}
+              <span class="post-nav__label">prev</span>
+            </span>
+            {{ end }}
+            <a
+              class="post-nav__info"
+              id="sketch-info-btn"
+              href="#"
+              aria-label="Keyboard shortcuts"
+            >
+              {{ readFile "static/icons/circle-info.svg" | safeHTML }}
+            </a>
+            {{ if .NextInSection }}
+            <a
+              class="post-nav__item"
+              data-nav="next"
+              href="{{ .NextInSection.Permalink }}"
+            >
+              <span class="post-nav__label">next</span>
+              {{ readFile "static/icons/arrow-right.svg" | safeHTML }}
+            </a>
+            {{ else }}
+            <span
+              class="post-nav__item post-nav__item--disabled"
+              data-nav="next"
+            >
+              <span class="post-nav__label">next</span>
+              {{ readFile "static/icons/arrow-right.svg" | safeHTML }}
+            </span>
+            {{ end }}
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+{{ end }} {{ define "modal" }}
+<div class="sketch-modal" id="sketch-info-modal" aria-hidden="true">
+  <div class="sketch-modal__backdrop"></div>
+  <div class="sketch-modal__dialog">
+    <p class="sketch-modal__heading">Keyboard Shortcuts</p>
+    <ul class="sketch-modal__shortcuts">
+      <li>
+        <span class="sketch-modal__keys"><kbd>↵</kbd> Return</span>
+        <span class="sketch-modal__desc">Refresh sketch</span>
+      </li>
+      <li>
+        <span class="sketch-modal__keys"><kbd>←</kbd> <kbd>→</kbd> Arrows</span>
+        <span class="sketch-modal__desc">Prev / next sketch</span>
+      </li>
+      <li>
+        <span class="sketch-modal__keys"><kbd>Ctrl</kbd> + <kbd>/</kbd></span>
+        <span class="sketch-modal__desc">Save PNG</span>
+      </li>
+      <li>
+        <span class="sketch-modal__keys"
+          ><kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>/</kbd></span
+        >
+        <span class="sketch-modal__desc">Save WebP</span>
+      </li>
+      <li>
+        <span class="sketch-modal__keys"><kbd>Ctrl</kbd> + <kbd>P</kbd></span>
+        <span class="sketch-modal__desc">Save print-res PNG (4×)</span>
+      </li>
+    </ul>
+    <button class="sketch-modal__ok" id="sketch-info-ok">OK</button>
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,33 @@
+//
+// Styles - NO BOOTSTRAP
+//
+
+@import "normalize";
+
+/* =========================================================
+   Font faces — add project fonts here.
+   Place .woff2 files in static/fonts/ and reference them below.
+
+   Example:
+   @font-face {
+     font-display: swap;
+     font-family: "Font Name";
+     font-style: normal;
+     font-weight: 400;
+     src: url("/fonts/font-name-regular.woff2") format("woff2");
+   }
+   ========================================================= */
+
+// inline SVG icons — behave like text glyphs
+.icon {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  vertical-align: -0.125em;
+}
+
+// the major sections of our layout system
+@import "variables/index";
+@import "mixins/index";
+@import "components/index";
+@import "sections/index";

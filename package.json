@@ -1,0 +1,21 @@
+{
+  "name": "creativecoding-robbutz",
+  "version": "1.0.0",
+  "description": "A collection of creative coding experiments by Rob Butz.",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "canvas-sketch-util": "^1.10.0",
+    "gsap": "^3.13.0",
+    "normalize": "^0.3.1",
+    "tweakpane": "^4.0.5"
+  },
+  "scripts": {
+    "dev": "hugo server --port 1313 --buildDrafts",
+    "build": "hugo",
+    "preview": "hugo server",
+    "clean": "rm -rf public resources/_gen",
+    "refresh": "npm run clean && npm run dev"
+  },
+  "author": "Moonjoule",
+  "license": "ISC"
+}
