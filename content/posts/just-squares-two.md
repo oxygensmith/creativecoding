@@ -9,4 +9,6 @@ categories: ["canvas"]
 screenshot: "just-squares-two-001.webp"
 ---
 
-Drawing of squares that use Math.random to draw inner squares at random, better internal function structure. Refresh the page to see the squares change.
+Same 5×5 grid concept as <a href="/just-squares">the first sketch</a>, now refactored into the canvasSketch(sketch, settings) architecture.
+
+Proportional sizing replaces hardcoded pixel values — gap, offset, and cell dimensions all scale relative to width and height.

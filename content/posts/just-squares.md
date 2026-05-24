@@ -9,4 +9,6 @@ categories: ["canvas"]
 screenshot: "just-squares-001.webp"
 ---
 
-Drawing of squares that use Math.random to draw inner squares at random. Refresh the page to see the squares change.
+Just using the raw Canvas 2D API - no framework, procedural. A 5×5 grid of stroked squares, with <code>Math.random() < 0.5</code> deciding whether each gets a smaller inset square. Establishes the core loop before switching to the canvasSketch architecture.
+
+As with all examples, hit <span class="mono">&lt;enter&gt;</span> to regenerate the drawing to see the randomized features.

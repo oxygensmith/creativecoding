@@ -11,4 +11,8 @@ categories: ["canvas"]
 screenshot: "text-one-001.webp"
 ---
 
-Text and asynchronous functions, reading values from pixels of our canvas to properly center typography with the canvas measureText method. A keyup listener allows us to replace the canvas letter (try it).
+This example is my study of <span class="mono">context.measureText()</span> — the Canvas API's way of getting a glyph's actual rendered bounding box (not the font's em-square). The metrics are used to center a giant character precisely.
+
+A <span class="mono">keyup</span> listener swaps the letter live (try pressing letters on the keyboard).
+
+The sketch uses an async <span class="mono">canvasSketch</span> call that returns a <span class="mono">manager</span> handle, enabling programmatic re-renders without a page reload.

@@ -11,4 +11,6 @@ categories: ["canvas"]
 screenshot: "text-two-005.webp"
 ---
 
-Not a low-res, blown-up pixelated image: we are reading colour values from our canvas shape and colouring a canvas square in a grid. Change the character represented by pressing the letter.
+Rasterizes a letter to a tiny off-screen canvas (one pixel per grid cell), then reads back the pixel data with <span class="mono">getImageData</span>. Each cell's RGBA values color a circle on the main canvas — so what looks like a blocky letterform is actually a grid of individually-colored dots.
+
+Pressing any key redraws the grid for that character.

@@ -10,4 +10,4 @@ categories: ["canvas"]
 screenshot: "grid-two-001.webp"
 ---
 
-Grid of lines, rotated and weighted by 2D simplex noise. The noise field is sampled at each cell's position, mapping the output to a subtle angle and a line width that ranges from thin to bold. Advancing the x-coordinate of the noise sample each frame slides smoothly through the field, producing a slow, organic ripple across the grid.
+Extending <a href="/posts/grid-one/">the grid foundation</a>, this grid of lines is rotated and weighted by 2D simplex noise. The noise field is sampled at each cell's position, mapping the output to a subtle angle and a line width that ranges from thin to bold. Advancing the x-coordinate of the noise sample each frame slides smoothly through the field, producing a slow, organic ripple across the grid.

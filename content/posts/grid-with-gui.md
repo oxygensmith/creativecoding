@@ -11,6 +11,6 @@ categories: ["canvas"]
 screenshot: "grid-with-gui-004.webp"
 ---
 
-Animated grid with GUI slider controls. Tweak the sliders to adjust parameters mid-animation.
+This example builds on <a href="/posts/grid-two/">Grid II</a> with two differences: First, the grid-with-noise is made interactive via TweakPane. All parameters (cols, rows, freq, amp, lineCap, animate) are live-tweakable mid-animation.
 
-In this example, we are using 3D simplex-noise and, as a result, the animation has a more undulating, organic movement than in the 2D noise example. (This is more visible with a high number of rows and/or columns.)
+Second, we replace 2D simplex-noise (which scrolls the field horizontally) with 3D noise. The <code>frame</code> counter is fed in as the z-axis, so instead of the field sliding in a direction, the whole grid evolves in place — a more undulating, organic movement.

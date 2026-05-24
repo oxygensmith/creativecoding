@@ -21,6 +21,13 @@
       </div>
       <div class="description">
         <div class="description-content">
+          {{ with .GetTerms "tags" }}
+          <div class="tag-badges">
+            {{ range . }}
+            <a class="tag-badge" href="{{ .RelPermalink }}">{{ .Name }}</a>
+            {{ end }}
+          </div>
+          {{ end }}
           <h3>{{ .Title }}</h3>
           <div class="description-text">{{ .Content }}</div>
           <nav class="post-nav">

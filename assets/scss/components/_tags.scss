@@ -1,0 +1,26 @@
+.tag-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.tag-badge {
+  display: inline-block;
+  padding: 0.2em 0.55em;
+  border-radius: 3px;
+  font-size: 0.72rem;
+  text-transform: lowercase;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+
+  &:hover {
+    background-color: var(--color-highlight);
+    color: var(--color-background);
+  }
+}

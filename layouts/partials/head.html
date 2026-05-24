@@ -2,7 +2,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="author" content="{{ .Site.Params.author }}" />
-<title>{{ .Title }}</title>
+<title>
+  {{- if .IsHome -}}
+    {{ .Site.Title }}
+  {{- else if eq .Kind "term" -}}
+    {{ .Data.Singular | title }}: {{ .Title }} — {{ .Site.Title }}
+  {{- else if eq .Kind "taxonomy" -}}
+    {{ .Title | title }} — {{ .Site.Title }}
+  {{- else -}}
+    {{ .Title }} — {{ .Site.Title }}
+  {{- end -}}
+</title>
 {{ if .Params.robots }}<meta name="robots" content="{{ .Params.robots }}">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}" />
 

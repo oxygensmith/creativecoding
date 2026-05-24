@@ -10,4 +10,4 @@ categories: ["canvas"]
 screenshot: "grid-one-001.webp"
 ---
 
-An efficient and flexible way of describing a grid.
+The core grid pattern used throughout this series: a flat array of numCells is indexed with <code>col = i % cols</code> and <code>row = Math.floor(i / cols)</code>, and the grid is centered on the canvas with margin offsets. Each cell gets a context.save() / translate / draw / context.restore() cycle. Here it draws a single horizontal stroke at each cell center.
