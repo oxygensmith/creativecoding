@@ -179,7 +179,7 @@ p.small {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     flex-direction: row;
     gap: var(--space-7);
     align-items: stretch;
