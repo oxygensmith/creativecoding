@@ -1,10 +1,10 @@
 # CreativeCoding
 
-Just a place where we drop our CreativeCoding explorations, which are initially guided by Bruno Imbrezi's courses on Domestika. In place of canvas-sketch and canvas-sketch-utils we use our own architecture to integrate examples with Hugo (which runs its own local server). However, we use other useful dependencies like TweakPane to set up quick GUIs and bind animation object properties to them.
+Just a place where I drop my CreativeCoding explorations, which are initially guided by Bruno Imbrezi's courses on Domestika. In place of canvas-sketch and canvas-sketch-utils, I use my own architecture to integrate examples with Hugo (which runs its own local server). However, I still use the course's other useful dependencies like TweakPane to set up quick GUIs and bind animation object properties to them.
 
-# CreativeCoding uses our Hugo Markdown Template
+# CreativeCoding uses the Hugo Template
 
-CreativeCoding uses our starting point for Hugo static sites driven by markdown content files. Includes a full SCSS design system, a front-matter-based homepage section system, a pages section, and a blog.
+CreativeCoding uses my starting point for Hugo static sites driven by markdown content files. Includes a full SCSS design system (not quite as tight as it could be), a front-matter-based homepage section system, a pages section, and a blog.
 
 ---
 
@@ -225,13 +225,13 @@ template-hugo/
 
 Every sketch page has keyboard navigation active via `static/js/keyboard-nav.js`:
 
-| Key | Action |
-|---|---|
-| `↵ Return` | Regenerate sketch (re-runs `canvasSketch`) |
-| `← / →` | Navigate to previous / next sketch |
-| `Ctrl+/` | Save current canvas as PNG |
-| `Ctrl+Shift+/` | Save current canvas as WebP |
-| `Ctrl+P` | Save 4× print-resolution PNG (offscreen re-render) |
+| Key            | Action                                             |
+| -------------- | -------------------------------------------------- |
+| `↵ Return`     | Regenerate sketch (re-runs `canvasSketch`)         |
+| `← / →`        | Navigate to previous / next sketch                 |
+| `Ctrl+/`       | Save current canvas as PNG                         |
+| `Ctrl+Shift+/` | Save current canvas as WebP                        |
+| `Ctrl+P`       | Save 4× print-resolution PNG (offscreen re-render) |
 
 Press the ⓘ button in the post footer nav to see a shortcut reference at any time.
 
@@ -246,10 +246,10 @@ title: "Grid I"
 date: 2026-01-07
 draft: false
 description: "Short description shown on the post and in cards."
-screenshot: "grid-one-001.png"   # filename in static/screenshots/
-sketches: ["grid-one"]           # JS sketch file(s) in static/js/sketches/
-bordered: true                   # adds a visible border around the canvas
-tweakpane: true                  # loads TweakPane v3 CDN for parameter GUIs
+screenshot: "grid-one-001.png" # filename in static/screenshots/
+sketches: ["grid-one"] # JS sketch file(s) in static/js/sketches/
+bordered: true # adds a visible border around the canvas
+tweakpane: true # loads TweakPane v3 CDN for parameter GUIs
 tags: ["noise", "grid", "featured"]
 categories: ["generative"]
 ```
@@ -263,10 +263,10 @@ categories: ["generative"]
 
 Posts appear as cards on the homepage and examples list. Two formats are available, set via `cardLayout` in a section's `_index.md`:
 
-| `cardLayout` | Appearance |
-|---|---|
-| `"grid"` (default) | Square image top, 2–3 column grid |
-| `"horizontal"` | Title + description left, square thumbnail right |
+| `cardLayout`       | Appearance                                       |
+| ------------------ | ------------------------------------------------ |
+| `"grid"` (default) | Square image top, 2–3 column grid                |
+| `"horizontal"`     | Title + description left, square thumbnail right |
 
 ```yaml
 # content/_index.md or content/posts/_index.md
