@@ -28,7 +28,7 @@
             <a
               class="post-nav__item"
               data-nav="prev"
-              href="{{ .PrevInSection.Permalink }}"
+              href="{{ .PrevInSection.RelPermalink }}"
             >
               {{ readFile "static/icons/arrow-left.svg" | safeHTML }}
               <span class="post-nav__label">prev</span>
@@ -54,7 +54,7 @@
             <a
               class="post-nav__item"
               data-nav="next"
-              href="{{ .NextInSection.Permalink }}"
+              href="{{ .NextInSection.RelPermalink }}"
             >
               <span class="post-nav__label">next</span>
               {{ readFile "static/icons/arrow-right.svg" | safeHTML }}
