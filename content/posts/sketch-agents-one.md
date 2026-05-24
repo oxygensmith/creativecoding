@@ -5,7 +5,7 @@ draft: false
 description: "OOP agents with velocity, bounce, and an animation loop."
 sketches: ["sketch-agents-one"]
 bordered: true
-tags: ["foundations"]
+tags: ["foundations", "agents"]
 categories: ["canvas"]
 screenshot: "sketch-agents-one-001.webp"
 ---
