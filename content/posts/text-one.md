@@ -2,7 +2,7 @@
 title: "Text Properties"
 date: 2026-01-10
 draft: false
-description: "Canvas text functions demonstrated."
+description: "Centering text precisely using Canvas measureText metrics."
 sketches: ["text-one"]
 bordered: true
 tweakpane: false

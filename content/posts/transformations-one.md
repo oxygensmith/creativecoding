@@ -2,7 +2,7 @@
 title: "Transformations"
 date: 2026-01-03
 draft: false
-description: "Using Canvas and transforming the context."
+description: "Context transforms: shapes arranged in a circle with trigonometry."
 sketches: ["transformations-one"]
 bordered: true
 tags: ["foundations"]

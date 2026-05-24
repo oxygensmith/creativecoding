@@ -2,7 +2,7 @@
 title: "Sketch Agents"
 date: 2026-01-05
 draft: false
-description: "Using sketch agents"
+description: "OOP agents with velocity, bounce, and an animation loop."
 sketches: ["sketch-agents-one"]
 bordered: true
 tags: ["foundations"]

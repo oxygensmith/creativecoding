@@ -2,7 +2,7 @@
 title: "More squares!"
 date: 2026-01-02
 draft: false
-description: "First use of Canvas."
+description: "Same grid refactored into the canvasSketch architecture."
 sketches: ["just-squares-two"]
 bordered: true
 categories: ["canvas"]

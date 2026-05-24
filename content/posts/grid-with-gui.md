@@ -2,7 +2,7 @@
 title: "Grid with GUI"
 date: 2026-01-09
 draft: false
-description: "Adding a GUI to our animated grid."
+description: "Animated noise grid with live TweakPane controls."
 sketches: ["grid-with-gui"]
 bordered: true
 tweakpane: true

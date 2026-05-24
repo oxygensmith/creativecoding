@@ -2,7 +2,7 @@
 title: "Text Properties II"
 date: 2026-01-11
 draft: false
-description: "Text functions combined with noise."
+description: "Letter pixels sampled and redrawn as a dot grid."
 sketches: ["text-two"]
 bordered: true
 tweakpane: false

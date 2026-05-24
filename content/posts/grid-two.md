@@ -2,7 +2,7 @@
 title: "Grid II"
 date: 2026-01-08
 draft: false
-description: "Adding randomness to our grid."
+description: "Grid lines rotated and weighted by a 2D noise field."
 sketches: ["grid-two"]
 bordered: true
 tags: ["animation", "grids"]

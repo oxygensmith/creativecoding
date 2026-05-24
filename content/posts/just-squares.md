@@ -2,7 +2,7 @@
 title: "Just squares!"
 date: 2026-01-01
 draft: false
-description: "First use of Canvas."
+description: "Raw Canvas API: a 5×5 grid of squares."
 sketches: ["just-squares"]
 bordered: true
 categories: ["canvas"]
