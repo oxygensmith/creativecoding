@@ -108,6 +108,10 @@ h6,
   padding: var(--space-7) 0;
 }
 
+.sketch-canvas {
+  max-width: 100%;
+}
+
 .sketch-canvas--bordered {
   border: var(--border-width--base) solid var(--border-color);
 }
@@ -183,6 +187,14 @@ p.small {
     flex-direction: row;
     gap: var(--space-7);
     align-items: stretch;
+  }
+
+  .art {
+    min-width: 0;
+    @include media-breakpoint-up(lg) {
+      flex: 1;
+      min-width: 600px;
+    }
   }
 
   .description {

@@ -5,27 +5,26 @@ const settings = {
 let manager;
 
 let text = "A";
-let fontSize = 800;
 let fontFamily = "serif";
 
 const typeCanvas = document.createElement("canvas");
 const typeContext = typeCanvas.getContext("2d");
 
 const sketch = ({ context, width, height }) => {
-  const cell = 20;
-  const cols = Math.floor(width / cell);
-  const rows = Math.floor(height / cell);
-  const numCells = cols * rows;
-
-  typeCanvas.width = cols;
-  typeCanvas.height = rows;
-
   return ({ context, width, height, frame }) => {
+    const cell = 20;
+    const cols = Math.floor(width / cell);
+    const rows = Math.floor(height / cell);
+    const numCells = cols * rows;
+
+    typeCanvas.width = cols;
+    typeCanvas.height = rows;
+
     /* fill background */
     typeContext.fillStyle = getCSSVar("--color-background");
     typeContext.fillRect(0, 0, cols, rows);
 
-    fontSize = cols;
+    const fontSize = cols;
 
     /* add text */
     typeContext.fillStyle = "white";

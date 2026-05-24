@@ -5,7 +5,6 @@ const settings = {
 let manager;
 
 let text = "A";
-let fontSize = 800;
 let fontFamily = "serif";
 
 const sketch = ({ width, height }) => {
@@ -15,6 +14,7 @@ const sketch = ({ width, height }) => {
     context.fillRect(0, 0, width, height);
 
     /* add text */
+    const fontSize = Math.min(width, height) * 1.3;
     context.fillStyle = "white";
     context.font = `${fontSize}px ${fontFamily}`;
     context.textBaseline = "top";
